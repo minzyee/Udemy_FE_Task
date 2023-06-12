@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>홈페이지 태그 분석</title>
+		<style>
+			table {
+				border: 1px solid pink;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			th {
+				background-color: rgb(253, 215, 222);
+			}
+
+			td {
+				width: 150px;
+			}
+
+			.article-wrap {
+				display: flex;
+				padding: 4px;
+			}
+
+			article {
+				margin-right: 30px;
+			}
+
+			footer {
+				padding: 20px;
+				border-top: 1px solid #e0e0e0;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 팀별로 "웅진씽크빅" 홈페이지와 "웅진IT" 홈페이지 HTML 태그 분석하고 시맨틱
+		태그를 사용해야 하는 이유를 만들어보세요. 조건 1. 시맨틱 태그 사용하기 2.
+		우리가 배운 태그 10개 이상 사용하기 (ul, li 또는 ol, li 태그 포함) -->
+		<h1>🤔 웅진씽크빅과 웅진IT 홈페이지의 HTML 태그 분석</h1>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>웅진씽크빅</th>
+					<th>웅진IT</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>시맨틱태그 사용 X</td>
+					<td>시맨틱태그 사용 O</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="article-wrap">
+			<article>
+				<h2>시맨틱 태그의 장점</h2>
+				<ul>
+					<li>가독성에 좋다.</li>
+					<li>유지보수에 좋다.</li>
+					<li>SEO 최적화에 유리하다.</li>
+					<li>
+						스크린리더와 같은 도구 또는<br />
+						Tab키로 이동하는데 있어 접근성이 좋아진다.
+					</li>
+				</ul>
+			</article>
+
+			<article>
+				<h2>div 태그의 장점</h2>
+				<ul>
+					<li>레이아웃의 유연성</li>
+					<li>스타일링 용이</li>
+					<li>크로스 브라우저 호환성</li>
+				</ul>
+			</article>
+		</div>
+		<footer>&copy; Udemy 8팀 Copyrights reserved.</footer>
+	</body>
+</html>
