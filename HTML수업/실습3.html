@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>로그인 폼 만들기</title>
+		<style>
+			div {
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>로그인 폼 만들기</h1>
+		<form action="여기어때" method="post">
+			<div>
+				<label for="username">사용자명</label>
+				<input type="text" id="usename" name="username" required />
+			</div>
+			<div>
+				<label for="email">이메일: </label>
+				<input type="email" id="email" name="email" required />
+			</div>
+			<div>
+				<label for="password">비밀번호: </label>
+				<input type="password" id="password" name="password" required />
+			</div>
+			<div>
+				<label for="phone">전화번호: </label>
+				<input type="tel" id="phone" name="phone" required />
+			</div>
+			<div>
+				<label for="auto-login">자동로그인: </label>
+				<input type="checkbox" name="auto-login" required />
+			</div>
+			<div>
+				<button type="reset">초기화</button>
+				<button type="submit">로그인</button>
+			</div>
+		</form>
+	</body>
+</html>
