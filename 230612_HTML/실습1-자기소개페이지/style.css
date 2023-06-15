@@ -1,0 +1,109 @@
+/* 초기 셋팅 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+/* layout */
+.wrap {
+	margin: 0 auto;
+}
+
+header {
+	background-color: #edf4f9;
+	position: sticky;
+	top: 0;
+}
+
+nav {
+	padding: 80px 80px 0 80px;
+}
+
+header > nav > ul {
+	display: flex;
+	width: 100%;
+	padding: 30px 0 30px 20px;
+	border-bottom: 2px solid #fff;
+}
+
+header > nav > ul > li {
+	margin-right: 80px;
+	font-size: 32px;
+}
+
+header > nav > ul > li.on a {
+	color: #444;
+}
+
+header > nav > ul > li a {
+	color: #bdbdbd;
+	font-weight: bold;
+}
+
+/* section */
+section {
+	padding: 0 80px;
+}
+
+section > .layout-center {
+	padding: 80px 20px;
+	border-bottom: 2px solid #e0e0e0;
+}
+
+section > div > h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+dl > div {
+	display: flex;
+	font-size: 18px;
+}
+
+dl > div > dt {
+	margin-right: 10px;
+	margin-bottom: 16px;
+}
+
+section > div > ul li {
+	margin-bottom: 16px;
+	font-size: 18px;
+}
+
+#profile {
+	background-color: #edf4f9;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 80px 0;
+}
+
+h1 {
+	font-size: 50px;
+	line-height: 70px;
+}
+
+#profile > img {
+	width: 320px;
+	border-radius: 8%;
+}
+
+/* footer */
+footer {
+	padding: 40px 0;
+	text-align: center;
+}

@@ -1,0 +1,165 @@
+/* 초기 셋팅 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+/* layout */
+.wrap {
+	margin: 0 auto;
+}
+
+header {
+	background-color: #edf4f9;
+	position: sticky;
+	top: 0;
+}
+
+nav {
+	padding: 60px 60px 0 60px;
+}
+
+header > .inner > nav > ul {
+	display: flex;
+	width: 100%;
+	padding: 30px 0 30px 20px;
+	border-bottom: 2px solid #fff;
+}
+
+header > .inner > nav > ul > li {
+	margin-right: 60px;
+	font-size: 28px;
+}
+
+header > .inner > nav > ul > li.on a {
+	color: #444;
+}
+
+header > .inner > nav > ul > li a {
+	color: #bdbdbd;
+	font-weight: bold;
+}
+
+/* section */
+section {
+	padding: 0 80px;
+}
+
+section > .inner {
+	padding: 80px 20px;
+	border-bottom: 2px solid #e0e0e0;
+}
+
+section > div > h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+section > div > ul li {
+	margin-bottom: 16px;
+	font-size: 18px;
+}
+
+/* section1 - profile */
+#profile {
+	background-color: #edf4f9;
+
+	justify-content: space-around;
+	align-items: center;
+}
+
+#profile > .inner {
+	background-color: #edf4f9;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: none;
+}
+
+#profile .inner > img {
+	width: 320px;
+	margin-left: 20px;
+	border-radius: 8%;
+}
+
+.greeting-txt {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	min-height: 320px;
+}
+
+.greeting-txt > h1 {
+	font-size: 30px;
+	line-height: 40px;
+	color: #1f1f1f;
+	margin-bottom: 16px;
+}
+
+.greeting-txt > p {
+	font-size: 16px;
+	margin-bottom: 16px;
+	line-height: 30px;
+}
+
+.contact li {
+	margin-bottom: 10px;
+}
+
+.contact li > a {
+	color: #888;
+	text-decoration: underline;
+}
+
+/* section2 - introduce */
+#introduce h3 {
+	margin-bottom: 20px;
+}
+
+article > p {
+	line-height: 24px;
+	margin-bottom: 20px;
+	color: #333333;
+}
+
+/* section3 - stack */
+.stack-list {
+	display: flex;
+	margin-bottom: 40px;
+}
+
+.stack-list h3 {
+	flex-basis: 150px;
+}
+
+.stack-list ul li {
+	margin-bottom: 10px;
+	list-style: inside;
+}
+
+/* section4 - certificate */
+#certificate ul li {
+	margin-bottom: 20px;
+	list-style: inside;
+}
+
+/* footer */
+footer {
+	padding: 40px 0;
+	text-align: center;
+	color: #bdbdbd;
+}
