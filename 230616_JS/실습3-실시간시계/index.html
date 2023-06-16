@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>실습3 - 웹으로 실시간 시계 만들기 - 김민지</title>
+		<style>
+			body {
+				background: #bdd59241;
+			}
+			.clock {
+				width: 200px;
+				border-radius: 16px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			#timer {
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+				font-size: 60px;
+				font-weight: bold;
+				color: #bdd592c4;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clock">
+			<div id="timer"></div>
+		</div>
+
+		<script>
+			function getTime() {
+				const clock = document.querySelector("#timer");
+				const time = new Date();
+				const hour = time.getHours();
+				const minutes = time.getMinutes();
+				const seconds = time.getSeconds();
+
+				clock.innerHTML = hour + ":" + minutes + ":" + seconds;
+				clock.innerHTML = `${hour < 10 ? `0${hour}` : hour}:${
+					minutes < 10 ? `0${minutes}` : minutes
+				}:${seconds < 10 ? `0${seconds}` : seconds}`;
+				hour + ":" + minutes + ":" + seconds;
+				`${hour}:${minutes}:${seconds}`;
+				hour < 10 ? `0${hour}` : hour;
+			}
+			getTime();
+		</script>
+	</body>
+</html>

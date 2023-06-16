@@ -1,0 +1,113 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input {
+	background: none;
+	border: none;
+	color: #fff;
+	text-align: right;
+}
+
+button {
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	transition: 0.1s all;
+	cursor: pointer;
+}
+
+.calculator {
+	position: relative;
+	width: 220px;
+	height: 300px;
+	background-color: #292b34;
+	border: 2px solid #54555c;
+	border-radius: 10px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	overflow: hidden;
+}
+
+.operator-plate {
+	height: 30%;
+	padding: 5px 10px;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+#result {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 30px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+#operator {
+	display: none;
+}
+
+/* 증가 감소 버튼 없애기 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.num-plate {
+	height: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.row {
+	display: flex;
+}
+
+.row > button {
+	width: 100%;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+	background: #5e5f66;
+	border: 0.5px solid #292b34;
+}
+
+/* 기호 배경색상 */
+.row:nth-child(4) > button:nth-child(1),
+.row:nth-child(4) > button:nth-child(2),
+.row:nth-child(4) > button:nth-child(3) {
+	background: #3e4048;
+}
+
+/* 연산자 배경색상 */
+.row > button:nth-child(4n) {
+	background: #f1a43c;
+}
+
+/* 클릭 시, 피연산자(숫자) 버튼 색상 변경 */
+.row button:active {
+	box-shadow: 0.2px 0.2px 4px 0.2px rgba(0, 0, 0, 0.234);
+	background: #999;
+}
+
+/* 클릭 시, 연산자 버튼 색상 변경 */
+.row > button:active:nth-child(4n) {
+	background: #f1a33ce3;
+}
+
+/* 클릭 시, 기호 버튼 색상 변경 */
+.row:nth-child(4) > button:active:nth-child(1),
+.row:nth-child(4) > button:active:nth-child(2),
+.row:nth-child(4) > button:active:nth-child(3) {
+	background: #99999960;
+}

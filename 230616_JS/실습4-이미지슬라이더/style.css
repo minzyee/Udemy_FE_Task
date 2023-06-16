@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	vertical-align: top;
+}
+
+.wrap {
+	position: relative;
+	width: 400px;
+	margin: 100px auto;
+}
+
+#img-box {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+
+.img-move {
+	display: flex;
+	width: 300%;
+	height: 100%;
+	transition: 0.3s all;
+}
+
+.img-move > img {
+	width: 33.333333%;
+}
+
+.btn {
+	position: absolute;
+	width: 60px;
+	height: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.btn.left {
+	left: -60px;
+}
+
+.btn.right {
+	right: -60px;
+}
