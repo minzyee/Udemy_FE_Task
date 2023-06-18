@@ -389,6 +389,7 @@ header nav ul li:nth-child(1) a {
 	position: relative;
 	height: 360px;
 	overflow: hidden;
+	transition: all 0.3s;
 }
 
 #review .review-list {
@@ -400,6 +401,7 @@ header nav ul li:nth-child(1) a {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 9;
+	transition: all 0.3s;
 }
 
 .review-card-item {
