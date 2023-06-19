@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrap {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.content {
+	position: absolute;
+	z-index: 999;
+	color: #fff;
+}
+
+h2 {
+	font-weight: normal;
+	text-align: center;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+/* 시계 기능 */
+#timer {
+	font-size: 120px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+/* 인삿말 기능 */
+#login-form {
+	display: flex;
+	gap: 10px;
+	width: 230px;
+	margin: 0 auto;
+
+	text-align: center;
+}
+
+#login-form input {
+	flex: 1;
+	border: none;
+	text-indent: 4px;
+	padding: 10px;
+	border-bottom: 1px solid #fff;
+	background: rgba(230, 230, 230, 0.199);
+}
+
+#login-form button {
+	border: 1px solid #fff;
+	color: #777;
+	padding: 10px;
+	background: rgba(230, 230, 230, 0.199);
+}
+
+/* 배경이미지 랜덤 전환 기능 */
+#img-box {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+#img-box img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
