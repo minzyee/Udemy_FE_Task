@@ -635,7 +635,8 @@ footer .inner ul li {
 	}
 
 	.review-card-item {
-		margin: 0 1%;
+		margin: 0 0.5%;
+		padding: 40px;
 	}
 
 	.reviewBtn {
