@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- React CDN -->
+		<script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+		<!-- Babel CDN (for JSX support) -->
+		<script src="https://unpkg.com/@babel/standalone@7.12.7/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel">
+			const root = document.querySelector("#root");
+			let a = 0;
+
+			const Title = () => {
+				return (
+					<h1
+						id="h1"
+						style={{ color: "green" }}
+						onMouseEnter={() => console.log("mouse over !")}
+					>
+						Total Clicks: {a}
+					</h1>
+				);
+			};
+
+			const Button = () => {
+				return (
+					<button
+						onClick={() => {
+							a = a + 1;
+							console.log(a);
+						}}
+					>
+						Click me !
+					</button>
+				);
+			};
+
+			const Container = () => {
+				return (
+					<div>
+						<Title />
+						<Button />
+					</div>
+				);
+			};
+
+			ReactDOM.render(<Container />, root);
+		</script>
+	</body>
+</html>

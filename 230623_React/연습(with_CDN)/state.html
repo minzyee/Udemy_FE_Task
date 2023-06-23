@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- React CDN -->
+		<script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+		<!-- Babel CDN (for JSX support) -->
+		<script src="https://unpkg.com/@babel/standalone@7.12.7/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel">
+			const root = document.querySelector("#root");
+
+			function App() {
+				const [counter, setCounter] = React.useState(0);
+				const onClick = () => {
+					setCounter(counter + 1);
+				};
+
+				return (
+					<>
+						<h1>Total Click: {counter}</h1>
+						<button onClick={onClick}>Click me</button>
+					</>
+				);
+			}
+
+			ReactDOM.render(<App />, root);
+		</script>
+	</body>
+</html>
