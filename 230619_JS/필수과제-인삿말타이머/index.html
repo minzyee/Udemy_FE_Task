@@ -23,6 +23,22 @@
 					<button type="submit">확인</button>
 				</form>
 				<h2 id="greeting" class="hidden"></h2>
+
+				<!-- 할 일 목록 기능 -->
+				<div id="todoList">
+					<form id="taskForm">
+						<input
+							type="text"
+							id="taskInput"
+							placeholder="할 일을 입력하세요."
+						/>
+						<button type="submit">추가</button>
+					</form>
+					<ul id="taskList"></ul>
+				</div>
+
+				<!-- 현재 위치 날씨 기능 -->
+				<div id="weather"></div>
 			</div>
 
 			<!-- 배경이미지 랜덤 전환 기능 -->
@@ -32,5 +48,7 @@
 		<script src="./js/clock.js"></script>
 		<script src="./js/background.js"></script>
 		<script src="./js/greeting.js"></script>
+		<script src="./js/todo.js"></script>
+		<script src="./js/weatherAPI.js"></script>
 	</body>
 </html>
