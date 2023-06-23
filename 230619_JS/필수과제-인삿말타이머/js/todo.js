@@ -35,5 +35,5 @@ function addTask(task) {
 }
 
 function deleteTask(taskItem) {
-	taskList.removeChild(taskItem);
+	taskList.removeChild(taskItem); // taskList의 자식인 taskItem을 삭제한다.
 }
