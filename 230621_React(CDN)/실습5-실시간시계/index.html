@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>실습5 - 실시간 시계</title>
+		<!-- React CDN -->
+		<script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+		<!-- Babel CDN (for JSX support) -->
+		<script src="https://unpkg.com/@babel/standalone@7.12.7/babel.min.js"></script>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				background: #bdd59241;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				color: #bdd592;
+				font-size: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel">
+			function Timer() {
+				const [time, setTime] = React.useState(new Date());
+
+				const hours = String(time.getHours()).padStart(2, "0");
+				const minutes = String(time.getMinutes()).padStart(2, "0");
+				const seconds = String(time.getSeconds()).padStart(2, "0");
+
+				React.useEffect(() => {
+					const timeInterval = setInterval(() => {
+						setTime(new Date());
+					}, 1000);
+
+					return () => {
+						clearInterval(timeInterval);
+					};
+				}, []);
+
+				return <h2>{`${hours}:${minutes}:${seconds}`}</h2>;
+			}
+
+			ReactDOM.render(<Timer />, document.getElementById("root"));
+		</script>
+	</body>
+</html>

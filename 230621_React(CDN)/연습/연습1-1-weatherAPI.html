@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="weather"></div>
+		<script>
+			const weather = document.getElementById("weather");
+			const API_KEY = "c3df8f6af18e5750ad8bf59235540d55";
+
+			function getWeather(lat, lon) {
+				console.log(lat, lon);
+				fetch(
+					`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`, // API_key라고 해서 안나왔다.
+				)
+					.then(function (response) {
+						return response.json();
+					})
+					.then(function (json) {
+						console.log(json);
+						const temp = json.main.temp;
+						const humidity = json.main.humidity;
+						weather.innerText = `${temp} @ ${humidity}`;
+					});
+			}
+
+			// coords 좌표
+			function handleGeoSuccess(pos) {
+				console.log(pos);
+				const latitude = pos.coords.latitude;
+				const longitude = pos.coords.longitude;
+				getWeather(latitude, longitude);
+			}
+
+			function handleGeoError() {
+				console.log("error");
+			}
+
+			function init() {
+				navigator.geolocation.getCurrentPosition(
+					handleGeoSuccess,
+					handleGeoError,
+				);
+			}
+
+			init();
+		</script>
+	</body>
+</html>

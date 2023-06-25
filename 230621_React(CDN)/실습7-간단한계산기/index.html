@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>실습7 - 간단한 계산기</title>
+		<!-- React CDN -->
+		<script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+		<!-- Babel CDN (for JSX support) -->
+		<script src="https://unpkg.com/@babel/standalone@7.12.7/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel">
+			const Calculator = () => {
+				const [num1, setNum1] = React.useState("");
+				const [num2, setNum2] = React.useState("");
+				const [result, setResult] = React.useState("");
+
+				const handleNum1Change = (e) => {
+					setNum1(e.target.value);
+				};
+
+				const handleNum2Change = (e) => {
+					setNum2(e.target.value);
+				};
+
+				const getSum = () => {
+					const sum = parseInt(num1) + parseInt(num2);
+					setResult(sum);
+				};
+
+				return (
+					<>
+						<input type="number" value={num1} onChange={handleNum1Change} />
+						<input type="number" value={num2} onChange={handleNum2Change} />
+						<button onClick={getSum}>계산</button>
+						<p>결과: {result}</p>
+					</>
+				);
+			};
+
+			ReactDOM.render(<Calculator />, document.querySelector("#root"));
+		</script>
+	</body>
+</html>

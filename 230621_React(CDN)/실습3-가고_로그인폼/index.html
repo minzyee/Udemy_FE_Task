@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>실습3 - 로그인 폼 만들기</title>
+		<!-- React CDN -->
+		<script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+		<!-- Babel CDN (for JSX support) -->
+		<script src="https://unpkg.com/@babel/standalone@7.12.7/babel.min.js"></script>
+
+		<style>
+			div {
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel">
+			function LoginForm() {
+				return (
+					<div>
+						<header>
+							<h1>로그인 폼 만들기</h1>
+						</header>
+						<main>
+							<section>
+								<form action="../실습2-가고_검색폼/index.html">
+									<div>
+										<label htmlFor="username">사용자명: </label>
+										<input type="text" name="username" id="username" required />
+									</div>
+									<div>
+										<label htmlFor="email">이메일: </label>
+										<input type="email" name="email" id="email" required />
+									</div>
+									<div>
+										<label htmlFor="password">비밀번호: </label>
+										<input
+											type="password"
+											name="password"
+											id="password"
+											required
+										/>
+									</div>
+									<div>
+										<label htmlFor="phone">전화번호: </label>
+										<input type="tel" id="phone" name="phone" required />
+									</div>
+									<div>
+										<label htmlFor="auto-login">자동로그인: </label>
+										<input type="checkbox" name="auto-login" required />
+									</div>
+									<div>
+										<button type="reset">초기화</button>
+										<button type="submit">로그인</button>
+									</div>
+								</form>
+							</section>
+						</main>
+					</div>
+				);
+			}
+
+			ReactDOM.render(<LoginForm />, root);
+		</script>
+	</body>
+</html>

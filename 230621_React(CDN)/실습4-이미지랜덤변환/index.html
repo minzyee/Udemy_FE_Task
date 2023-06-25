@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>실습4 - 이미지 랜덤 변환</title>
+		<!-- React CDN -->
+		<script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+		<!-- Babel CDN (for JSX support) -->
+		<script src="https://unpkg.com/@babel/standalone@7.12.7/babel.min.js"></script>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			img {
+				width: 100vw;
+				height: 100vh;
+				object-fit: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel">
+			// 이미지를 담고있는 배열
+			const images = ["img0", "img1", "img2", "img3", "img4"];
+
+			// img 태그 렌더링해줄 컴포넌트
+			function RandomImg() {
+				const [randomIndex, setRandomIndex] = React.useState(0);
+
+				// 이미지를 담고있는 배열 갯수만큼의 난수 생성
+				const changeImages = () => {
+					const newIndex = Math.floor(Math.random() * images.length);
+					setRandomIndex(newIndex);
+				};
+
+				return (
+					<img
+						src={"./assets/" + images[randomIndex] + ".jpg"}
+						alt="배경이미지"
+						onClick={changeImages}
+					/>
+				);
+			}
+
+			ReactDOM.render(<RandomImg />, document.getElementById("root"));
+		</script>
+	</body>
+</html>
