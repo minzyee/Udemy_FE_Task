@@ -1,0 +1,17 @@
+ul,
+li {
+	list-style: none;
+}
+
+.navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	background: #eee;
+}
+
+.navigation ul {
+	display: flex;
+	gap: 20px;
+}
