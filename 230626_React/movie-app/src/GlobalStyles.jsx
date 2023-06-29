@@ -14,5 +14,9 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
+  body {
+    height: 100vh;
+  }
+
 `;
 export default GlobalStyles;
