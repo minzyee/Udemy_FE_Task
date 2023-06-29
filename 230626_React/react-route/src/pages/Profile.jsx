@@ -1,7 +1,5 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-// useNavigate:
-// useParams:
 
 const ProfileData = {
 	minzyee: {
@@ -23,16 +21,22 @@ const Profile = () => {
 	const { username } = useParams();
 	const navigate = useNavigate();
 	const profile = ProfileData[username];
+	// console.log(ProfileData["corgi"]);
 
-	// console.log(useParams());
-	// console.log(useNavigate());
-	// console.log(username);
-	console.log(profile);
+	// console.log(useParams()); // {username: 'minzyee'}
+	// console.log("navigate: ", navigate);
+	// console.log(username); // minzyee
+	// console.log(profile);
+	// console.log(profile.name); // name
 
+	if (!profile) {
+		return <div>존재하지 않는 유저입니다.</div>;
+	}
 	return (
 		<div>
+			<h3>{/* {profile.name}({username})이 무엇을 하는 사람일까요? */}</h3>
 			<h3>
-				{profile.name}({username})이 무엇을 하는 사람일까요?
+				{username}({profile.name})이 무엇을 하는 사람일까요?
 			</h3>
 			<p>{profile.describtion}</p>
 			<button onClick={() => navigate(-1)}>뒤로가기</button>
