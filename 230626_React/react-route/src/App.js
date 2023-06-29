@@ -25,9 +25,7 @@ function App() {
 					<Route path="/about" element={<About />} />
 					<Route path="/profiles/:username" element={<Profile />} />
 					<Route path="/search" element={<SearchResult />} />
-					{/* search에 대한 Route */}
 				</Routes>
-
 				<Footer />
 			</Router>
 		</>
