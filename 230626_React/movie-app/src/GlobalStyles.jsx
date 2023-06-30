@@ -18,5 +18,25 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
   }
 
+  img {
+    vertical-align: top;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  input {
+    border: none;
+    background: none;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+
 `;
 export default GlobalStyles;
