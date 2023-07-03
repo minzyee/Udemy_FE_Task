@@ -6,11 +6,11 @@ const Footer = () => {
 };
 
 const StyleFooter = styled.footer`
-	background: #cccccc2e;
+	background-color: #151515;
 	width: 100%;
 	padding: 60px 0;
 	text-align: center;
-	color: #ccc;
+	color: #555;
 `;
 
 export default Footer;
