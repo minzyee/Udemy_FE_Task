@@ -16,7 +16,7 @@ const CounterContainer = () => {
 	console.log(number);
 	return (
 		<DIV id="container">
-			<h1>Root</h1>
+			<h1>Props Container Root</h1>
 			<GRID_DIV id="grid">
 				{/* <Provider> */}
 				<Left1 number={number} />
@@ -31,7 +31,7 @@ function Left1(props) {
 	return (
 		<DIV>
 			<h1>Left1: {props.number}</h1>
-			<Left2 />
+			<Left2 number={props.number} />
 		</DIV>
 	);
 }
@@ -39,8 +39,8 @@ function Left1(props) {
 function Left2(props) {
 	return (
 		<DIV>
-			<h1>Left2</h1>
-			<Left3 />
+			<h1>Left2: {props.number}</h1>
+			<Left3 number={props.number} />
 		</DIV>
 	);
 }
@@ -48,7 +48,7 @@ function Left2(props) {
 function Left3(props) {
 	return (
 		<DIV>
-			<h1>Left3</h1>
+			<h1>Left3: {props.number}</h1>
 		</DIV>
 	);
 }
