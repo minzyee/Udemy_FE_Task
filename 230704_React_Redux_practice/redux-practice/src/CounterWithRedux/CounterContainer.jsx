@@ -1,19 +1,9 @@
 import React, { useState } from "react";
-import Counter from "./Counter";
 import styled from "styled-components";
-import { createStore } from "redux";
-
-// store 생성 시, 반드시 필요한 리듀서 함수
-// 리듀서 함수는 store 안에 있는 함수를 어떻게 바꿀지 경정해준다.
-function reducer(initialState, action) {
-	return;
-}
-
-const store = createStore(reducer);
 
 const CounterContainer = () => {
-	const [number, setNumber] = useState(1);
-	console.log(number);
+	const [number, setNumber] = useState(0);
+
 	return (
 		<DIV id="container">
 			<h1>Props Container Root</h1>

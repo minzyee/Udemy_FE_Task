@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Counter from "./Counter";
 import styled from "styled-components";
 import { createStore } from "redux";
 import { Provider, useSelector, useDispatch } from "react-redux";
@@ -10,13 +9,13 @@ import { Provider, useSelector, useDispatch } from "react-redux";
 
 const store = createStore(reducer);
 
-// store 생성 시, 반드시 필요한 리듀서 함수로, store 안에 있는 함수를 어떻게 바꿀지 경정해준다.
+// store 생성 시, 반드시 필요한 리듀서 함수로, store 안에 있는 함수를 어떻게 바꿀지 결정해준다.
 // initialState: 현재의 state 값
 // action: 어떻게 바꿀것인지에 대한 요청을 하는 곳
 // reducer함수는 action을 받아서 새로운 state값을 리턴한다.
 function reducer(currentState, action) {
 	if (currentState === undefined) {
-		return { number: 1 };
+		return { number: 0 };
 	}
 
 	const newState = { ...currentState }; // 불변성을 유지하기 위해 state를 복제 한다.
